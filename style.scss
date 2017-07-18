@@ -25,6 +25,13 @@ body {
     color: $font-color;
     //background-image: url('back.png');
 }
+a {
+    font-weight: bold;
+
+    text-decoration: none;
+
+    color: $secondary-color;
+}
 .no {
     max-width: 600px;
     margin: auto;
