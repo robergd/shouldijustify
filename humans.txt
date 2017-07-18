@@ -1,0 +1,17 @@
+/* TEAM */
+Designer:	Roberto Gonzalez
+Developer:	Roberto Gonzalez
+Contact: 	hi@rober.design
+From:		Valladolid, Spain
+Twitter: 	@robergd
+
+/* SITE */
+Language:	  English
+Doctype:	  HTML
+Tools:		  HTML5, CSS3
+IDE:		  Atom
+
+/* ADENDUM */
+For more information about this file visit humanstxt.org
+
+We are people, not machines
