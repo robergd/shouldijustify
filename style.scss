@@ -1,5 +1,6 @@
 /*! shouldijustify - rober.design */
 $font-color: #333;
+$secondary-color: #967931;
 $font-type: 'Playfair Display', serif;
 
 * {
@@ -44,6 +45,16 @@ p {
         margin-top: 0;
         @media(max-width: 600px) {
             font-size: 2em;
+        }
+    }
+    &.top {
+        font-size: 2em;
+
+        margin-top: 50px;
+
+        color: $secondary-color;
+        @media(max-width: 600px) {
+            font-size: 1.4em;
         }
     }
 }
