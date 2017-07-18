@@ -28,12 +28,15 @@ body {
     justify-content: center;
     align-items: center;
     h1 {
-        font-size: 16rem;
+        font-size: 15rem;
         @media(max-width: 600px) {
             font-size: 8rem;
         }
     }
 }
-.subtitle {
+p{
     text-align: center;
+	&.med{
+		font-size: 20px;
+	}
 }
