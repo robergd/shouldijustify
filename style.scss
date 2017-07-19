@@ -67,9 +67,14 @@ p {
 }
 
 .footer {
-    font-size: .8em;
+    font-size: .7em;
 
-    margin-top: 10rem;
+    margin-top: 9rem;
+
+    // opacity: .5;
+    // &:hover {
+    //     opacity: 1;
+    // }
     pre {
         display: inline;
 
