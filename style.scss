@@ -28,9 +28,9 @@ body {
 a {
     font-weight: bold;
 
-    text-decoration: none;
+    text-decoration: underline;
 
-    color: $secondary-color;
+    color: $font-color;
 }
 .no {
     max-width: 600px;
@@ -63,5 +63,21 @@ p {
         @media(max-width: 600px) {
             font-size: 1.4em;
         }
+    }
+}
+
+.footer {
+    font-size: .8em;
+
+    margin-top: 10rem;
+    pre {
+        display: inline;
+
+        padding: 1px;
+        padding-right: 3px;
+        padding-left: 3px;
+
+        color: #fff;
+        background-color: $font-color;
     }
 }
