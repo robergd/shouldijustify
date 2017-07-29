@@ -1,7 +1,7 @@
 /*! shouldijustify - rober.design */
-$font-color: #333;
+$font-color: #303030;
 $secondary-color: #967931;
-$font-type: 'Playfair Display', serif;
+$font-type: 'Special Elite', monospace;
 
 * {
     box-sizing: border-box;
@@ -13,6 +13,10 @@ $font-type: 'Playfair Display', serif;
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
 }
+::selection {
+    background: blue;
+    color: #fff;
+}
 body {
     font-family: $font-type;
     font-size: 16px;
@@ -23,6 +27,7 @@ body {
     text-align: center;
 
     color: $font-color;
+	background-color: #fff;
     //background-image: url('back.png');
 }
 a {
@@ -32,17 +37,29 @@ a {
 
     color: $font-color;
 }
-.no {
+.glitch {
     max-width: 600px;
     margin: auto;
+	margin-top: 100px;
     h1 {
         font-size: 15rem;
 
         margin: auto;
+		position: relative;
+		text-shadow: 2px 2px 0px #fff, 4px 4px 0px #333,6px 6px 0px #fff,8px 8px 0px #333,10px 10px 0px #fff, 12px 12px 0px #333;
         @media(max-width: 600px) {
             font-size: 9rem;
         }
     }
+
+}
+@keyframes blink {
+0%, 49% {
+    background-color: red;
+}
+50%, 100% {
+    background-color: blue;
+}
 }
 p {
     text-align: center;
@@ -84,5 +101,70 @@ p {
 
         color: #fff;
         background-color: $font-color;
+		animation: blink 2s infinite;
     }
+	.twitter-share-button{
+		margin-top: 1em;
+	}
+}
+
+.glitch {
+    font-size: 15rem;
+
+    position: relative;
+
+    width: 400px;
+	margin: auto;
+	margin-top: 100px;
+
+    color: $font-color;
+}
+
+@keyframes noise-anim{
+	$steps:20;
+		@for $i from 0 through $steps{
+		#{percentage($i*(1/$steps))}{
+			clip:rect(random(200)+px,9999px,random(200)+px,0);
+		}
+	}
+}
+.glitch:after {
+    position: absolute;
+    top: 0;
+    left: 55px;
+
+    overflow: hidden;
+    clip: rect(0,300px,0,0);
+
+    content: attr(data-text);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+
+    color: $font-color;
+    background: white;
+    text-shadow: -1px 0 red;
+}
+
+
+@keyframes noise-anim-2{
+	$steps:20;
+		@for $i from 0 through $steps{
+		#{percentage($i*(1/$steps))}{
+			clip:rect(random(200)+px,9999px,random(200)+px,0);
+		}
+	}
+}
+.glitch:before {
+    position: absolute;
+    top: 0;
+    left: 47px;
+
+    overflow: hidden;
+    clip: rect(0,300px,0,0);
+
+    content: attr(data-text);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+
+    color: $font-color;
+    background: white;
+    text-shadow: 1px 0 blue;
 }
