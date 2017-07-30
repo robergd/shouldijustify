@@ -71,36 +71,36 @@ a {
 			}
 		}
 	}
-	&:after {
-	    position: absolute;
-	    top: 0;
-	    left: 5px;
-
-	    overflow: hidden;
-	    clip: rect(0,300px,0,0);
-
-	    content: attr(data-text);
-	    animation: glred 2s infinite linear alternate-reverse;
-
-	    color: $font-color;
-	    background: #fff;
-	    text-shadow: -1px 0 red;
-	}
-	&:before {
-	    position: absolute;
-	    top: -1px;
-	    left: 7px;
-
-	    overflow: hidden;
-	    clip: rect(0,300px,0,0);
-
-	    content: attr(data-text);
-	    //animation: glblue 3s infinite linear alternate-reverse;
-
-	    color: $font-color;
-	    background: #fff;
-	    text-shadow: 1px 0 blue;
-	}
+	// &:after {
+	//     position: absolute;
+	//     top: 0;
+	//     left: 5px;
+	//
+	//     overflow: hidden;
+	//     clip: rect(0,300px,0,0);
+	//
+	//     content: attr(data-text);
+	//     animation: glred 2s infinite linear alternate-reverse;
+	//
+	//     color: $font-color;
+	//     background: #fff;
+	//     text-shadow: -1px 0 red;
+	// }
+	// &:before {
+	//     position: absolute;
+	//     top: -1px;
+	//     left: 7px;
+	//
+	//     overflow: hidden;
+	//     clip: rect(0,300px,0,0);
+	//
+	//     content: attr(data-text);
+	//     animation: glblue 3s infinite linear alternate-reverse;
+	//
+	//     color: $font-color;
+	//     background: #fff;
+	//     text-shadow: 1px 0 blue;
+	// }
 }
 
 @keyframes blink {
