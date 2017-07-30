@@ -48,25 +48,59 @@ a {
     width: 400px;
     max-width: 600px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 2.5rem;
 
     color: $font-color;
     @media(max-width: 600px) {
 		width: 300px;
         font-size: 11rem;
     }
-    h1 {
-        font-size: 15rem;
+	@keyframes glred{
+		$steps:20;
+			@for $i from 0 through $steps{
+			#{percentage($i*(1/$steps))}{
+				clip:rect(random(300)+px,9999px,random(300)+px,0);
+			}
+		}
+	}
+	@keyframes glblue{
+		$steps:20;
+			@for $i from 0 through $steps{
+			#{percentage($i*(1/$steps))}{
+				clip:rect(random(300)+px,9999px,random(300)+px,0);
+			}
+		}
+	}
+	&:after {
+	    position: absolute;
+	    top: 0;
+	    left: 5px;
 
-        position: relative;
+	    overflow: hidden;
+	    clip: rect(0,300px,0,0);
 
-        margin: auto;
+	    content: attr(data-text);
+	    animation: glred 2s infinite linear alternate-reverse;
 
-        text-shadow: 2px 2px 0 #fff, 4px 4px 0 #333,6px 6px 0 #fff,8px 8px 0 #333,10px 10px 0 #fff, 12px 12px 0 #333;
-        @media(max-width: 600px) {
-            font-size: 9rem;
-        }
-    }
+	    color: $font-color;
+	    background: #fff;
+	    text-shadow: -1px 0 red;
+	}
+	&:before {
+	    position: absolute;
+	    top: -1px;
+	    left: 7px;
+
+	    overflow: hidden;
+	    clip: rect(0,300px,0,0);
+
+	    content: attr(data-text);
+	    //animation: glblue 3s infinite linear alternate-reverse;
+
+	    color: $font-color;
+	    background: #fff;
+	    text-shadow: 1px 0 blue;
+	}
 }
 
 @keyframes blink {
@@ -98,11 +132,40 @@ p {
         }
     }
 }
+.example {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 15px;
+
+    text-align: left;
+    h2 {
+        font-size: 1.7em;
+
+        margin-bottom: 60px;
+        padding-left: 20px;
+
+        hyphens: auto;
+
+        border-left: 4px solid red;
+		@media(max-width: 600px) {
+			hyphens: none;
+			font-size: 1.4em;
+		}
+    }
+    img {
+        width: 100%;
+    }
+}
+
 
 .footer {
     font-size: .7em;
 
+    max-width: 320px;
     margin-top: 9rem;
+    margin-right: auto;
+    margin-left: auto;
 
     // opacity: .5;
     // &:hover {
@@ -115,62 +178,12 @@ p {
         padding-right: 3px;
         padding-left: 3px;
 
+        //animation: blink 2s infinite;
+
         color: #fff;
         background-color: $font-color;
-		animation: blink 2s infinite;
     }
-	.twitter-share-button{
-		margin-top: 1em;
-	}
-}
-
-
-
-@keyframes noise-anim{
-	$steps:20;
-		@for $i from 0 through $steps{
-		#{percentage($i*(1/$steps))}{
-			clip:rect(random(300)+px,9999px,random(300)+px,0);
-		}
-	}
-}
-.glitch:after {
-    position: absolute;
-    top: 0;
-    left: 5px;
-
-    overflow: hidden;
-    clip: rect(0,300px,0,0);
-
-    content: attr(data-text);
-    animation: noise-anim 2s infinite linear alternate-reverse;
-
-    color: $font-color;
-    background: #fff;
-    text-shadow: -1px 0 red;
-}
-
-
-@keyframes noise-anim-2{
-	$steps:20;
-		@for $i from 0 through $steps{
-		#{percentage($i*(1/$steps))}{
-			clip:rect(random(300)+px,9999px,random(300)+px,0);
-		}
-	}
-}
-.glitch:before {
-    position: absolute;
-    top: -1px;
-    left: 7px;
-
-    overflow: hidden;
-    clip: rect(0,300px,0,0);
-
-    content: attr(data-text);
-    animation: noise-anim-2 3s infinite linear alternate-reverse;
-
-    color: $font-color;
-    background: #fff;
-    text-shadow: 1px 0 blue;
+    .twitter-share-button {
+        margin-top: 1em;
+    }
 }
