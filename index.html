@@ -41,6 +41,7 @@
 
 		h3,
 		a,
+		p,
 		.footer {
 			font-weight: 100;
 			color: inherit;
@@ -49,7 +50,7 @@
 
 		svg {
 			width: 100%;
-			height: 90%;
+			height: 80%;
 		}
 
 		text {
@@ -58,17 +59,32 @@
 			font-variation-settings: 'wght' 700;
 		}
 
+		.text {
+			text-align: center;
+			padding: 0 40px;
+			max-width: 60%;
+		}
+
 		.footer {
 			font-size: small;
 		}
 
 		@media (max-width: 640px) {
-			body,html{
+
+			body,
+			html {
 				justify-content: flex-start;
 			}
+
 			svg {
 				width: 100%;
-				height: 70%;
+				height: 60%;
+			}
+
+			.text {
+				text-align: center;
+				padding: 0 40px;
+				max-width: 80%;
 			}
 		}
 	</style>
@@ -76,12 +92,18 @@
 
 <body>
 	<h3>
-		Should text on the web be justified?
+		Should text on the web be justified? <small>*</small>
 	</h3>
 	<svg viewBox="0 0 100 100" preserveAspectRatio="none">
 		<text x="50" y="65" dominant-baseline="middle" text-anchor="middle" textLength="100"
 			lengthAdjust="spacingAndGlyphs">NO</text>
 	</svg>
+
+	<p class="text">
+		Text justification creates uneven spacing between words, which can disrupt the reader’s rhythm and make lines
+		harder to follow. It often leads to “rivers” of white space that distract the eye.
+	</p>
+
 	<div class="footer">
 		Made with ❤️ by <a href="https://rober.design" title="Rober González">Rober</a>
 	</div>
